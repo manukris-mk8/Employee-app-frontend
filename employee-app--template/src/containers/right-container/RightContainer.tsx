@@ -2,7 +2,6 @@ import './RightContainer.css'
 import kvLogo from '../../assets/kv-logo.png'
 import { Input, Button } from '../../components/index'
 import { useState, useEffect, useRef } from 'react'
-// import useMousePointer from '../../hooks/useMousePointer'
 import { useLocalStorageHook } from '../../hooks/useLocalStorageHook'
 import { useNavigate } from 'react-router-dom'
 import { useLoginMutation } from '../../api-services/auth/login.api'
@@ -13,14 +12,11 @@ export const RightContainer = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
-  const [error,setError] = useState('');
-  // const [localStorageData] = 
+  const [error, setError] = useState('');
 
   const [showPassword, setShowPassword] = useLocalStorageHook("isShowPassword", "false");
-  // const [isLoggedIn, setIsLoggedIn] = useLocalStorageHook("isLoggedIn", "false");
 
-  const [login,{isLoading}] = useLoginMutation();
-  // const [mousePointer] = useMousePointer();
+  const [login, { isLoading }] = useLoginMutation();
 
   const navigate = useNavigate();
 
@@ -37,15 +33,15 @@ export const RightContainer = () => {
 
   const onLogin = async () => {
     login({ email: username, password: password })
-    .unwrap()
-    .then((response) => {
-      localStorage.setItem("token", response.accessToken.token)
-      localStorage.setItem("username", response.accessToken.name)
+      .unwrap()
+      .then((response) => {
+        const token = JSON.stringify(response.data.accessToken)
+        localStorage.setItem("token", token)
 
-      navigate('/employees');
-    }).catch((error) => {
-      setError(error.data.message)
-    })
+        navigate('/employees');
+      }).catch((error) => {
+        setError(error.data.message)
+      })
   }
 
   useEffect(() => {
@@ -70,27 +66,15 @@ export const RightContainer = () => {
     }
   }
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("isLoggedIn");
-  //   if(token === 'true'){
-  //     navigate('/employees')
-  //   }
-  // })
+
 
   const handleLogin = (e: Event) => {
     e.preventDefault()
     onLogin();
 
-    // if (username === "admin" && password === "12341234") {
-    //   setIsLoggedIn("true");
-    //   navigate('/employees');
-    // }
-    // else{
-    //   setIsLoggedIn("false");
-    // }
   }
 
-    if (isLoading) return <LoadingComponent/>;
+  if (isLoading) return <LoadingComponent />;
 
 
   return (
@@ -110,15 +94,9 @@ export const RightContainer = () => {
         </div>
 
         <Button disabled={isLoading} text="Log in" className='button-class' type='submit' />
-        {error && 
-          <p style={{marginTop:"10px",color:"red"}}>Error: {error}</p>
+        {error &&
+          <p style={{ marginTop: "10px", color: "red" }}>Error: {error}</p>
         }
-        {/* 
-      <p>username:{username}</p>
-      <p>password:{password}</p>
-      <p>X: {mousePointer.x}</p>
-      <p>Y: {mousePointer.y}</p> */}
-
 
       </form>
     </div>

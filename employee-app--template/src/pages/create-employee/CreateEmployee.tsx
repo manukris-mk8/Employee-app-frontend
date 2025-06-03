@@ -2,19 +2,15 @@ import { useState, type FormEvent } from 'react'
 import './CreateEmployee.css'
 import { useNavigate } from 'react-router-dom'
 import { FormComponent } from '../../components/form-component/FormComponent'
-import store from '../../store/store'
-import { PopupModal } from '../../components/popup-modal/PopupModal'
 import { useCreateEmployeeMutation } from '../../api-services/employees/employee.api'
 import LoadingComponent from '../../components/loadingComponent/LoadingComponent'
 import { toast } from 'react-toastify'
 
 const CreateEmployee = () => {
 
-    const [isSuccess, setIsSuccess] = useState(false);
     const [createEmployee, { isLoading }] = useCreateEmployeeMutation();
 
 
-    // const [counter,setCounter] = useState(0);
     const [employeeData, setEmployeeData] = useState({
         id: 1,
         name: '',
@@ -35,14 +31,7 @@ const CreateEmployee = () => {
         }
     });
 
-    // const [searchParams,setSearchParams] = useSearchParams();
-
-    // const handleGetSearchParams = () => {
-    //     console.log(searchParams.get("ennaVenam"))
-    // }
-
     const onCreate = async () => {
-        console.log("body", employeeData);
 
         createEmployee(employeeData)
             .unwrap()
@@ -66,13 +55,7 @@ const CreateEmployee = () => {
     const handleCreate = (e: FormEvent) => {
         e.preventDefault()
         onCreate();
-        // console.log('Updated employee:', employeeData);
-        // const action = addEmployee (employeeData) ;
-        // dispatch(action)
-        // Add logic to update employee data in backend
-        // navigate('/employees');
-        // setIsSuccess(true);
-        console.log(store.getState());
+        navigate('/employees');
 
     };
 
@@ -85,20 +68,8 @@ const CreateEmployee = () => {
             }
         }));
     };
-    // const handleSetSearchParams = () => {
-    //     const newSearchParams = new URLSearchParams(searchParams);
-    //     newSearchParams.set("ennaVenam","onnumVenda")
-    //     setSearchParams(newSearchParams)
-    // }
-    // const handlePlusClick = () => {
-    //     setCounter((prev)=>prev +1)
-    // }
 
     const navigate = useNavigate()
-
-    // const handleMinusClick = () => {
-    //     setCounter((prev) => prev-1)
-    // }
 
     if (isLoading) return <LoadingComponent />;
 
@@ -110,22 +81,7 @@ const CreateEmployee = () => {
             </div>
             <div className="create-emp-div">
                 <FormComponent employee={employeeData} handleChange={handleChange} handleAddressChange={handleAddressChange} isEdit={false} handleSubmit={handleCreate} />
-
-                {/* <div className="button">
-                    <Button className="create-btn" type="submit" text="Create" onClick={handleCreate} />
-                    <Button className="reset-btn" type="reset" text="Cancel" onClick={() => navigate('/employees')} /> */}
-
-                {/* <p>Count = {counter}</p> */}
-                {/* </div> */}
             </div>
-            {isSuccess &&
-                <PopupModal
-                    mainText="Success"
-                    subText="employee created successfully"
-                    onClose={async () => setIsSuccess(false)}
-                    onSubmit={() => navigate('/employees')}
-                />
-            }
         </div>
 
 

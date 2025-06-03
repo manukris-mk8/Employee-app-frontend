@@ -1,4 +1,5 @@
 export interface LoginResponse {
+    data: {
     tokenType: string,
     accessToken: {
         id:string,
@@ -7,6 +8,7 @@ export interface LoginResponse {
         role:string,
         token:string
     }
+}
 }
 
 export interface LoginPayload {
