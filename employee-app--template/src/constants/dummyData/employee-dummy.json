@@ -1,0 +1,211 @@
+[
+    {
+        "id": 1,
+        "name": "John",
+        "employeeId": "f5gg5",
+        "dateOfJoining": "2025-02-25",
+        "role": "Full Stack",
+        "status": "ACTIVE",
+        "department": 1,
+        "experience": 5,
+        "age": 30,
+        "email": "john@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "123",
+            "line1": "Main Street",
+            "line2": "Apt 4B",
+            "pincode": "100001"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Alice",
+        "employeeId": "a123",
+        "dateOfJoining": "2024-03-11",
+        "role": "Backend Developer",
+        "status": "ACTIVE",
+        "department": 2,
+        "experience": 3,
+        "age": 28,
+        "email": "alice@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "456",
+            "line1": "Oak Avenue",
+            "line2": "Suite 12",
+            "pincode": "100002"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Bob",
+        "employeeId": "b456",
+        "dateOfJoining": "2023-05-06",
+        "role": "Frontend Developer",
+        "status": "INACTIVE",
+        "department": 1,
+        "experience": 2,
+        "age": 26,
+        "email": "bob@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "789",
+            "line1": "Pine Street",
+            "line2": "Floor 3",
+            "pincode": "100003"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Charlie",
+        "employeeId": "c789",
+        "dateOfJoining": "2022-01-09",
+        "role": "QA Engineer",
+        "status": "ACTIVE",
+        "department": 2,
+        "experience": 4,
+        "age": 35,
+        "email": "charlie@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "321",
+            "line1": "Elm Street",
+            "line2": "Unit 5A",
+            "pincode": "100004"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Diana",
+        "employeeId": "d012",
+        "dateOfJoining": "2024-01-01",
+        "role": "Project Manager",
+        "status": "ACTIVE",
+        "department": 3,
+        "experience": 6,
+        "age": 40,
+        "email": "diana@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "654",
+            "line1": "Cedar Lane",
+            "line2": "Building B",
+            "pincode": "100005"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Ethan",
+        "employeeId": "e345",
+        "dateOfJoining": "2021-12-08",
+        "role": "DevOps Engineer",
+        "status": "INACTIVE",
+        "department": 1,
+        "experience": 5,
+        "age": 33,
+        "email": "ethan@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "987",
+            "line1": "Maple Drive",
+            "line2": "Suite 100",
+            "pincode": "100006"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Fiona",
+        "employeeId": "f678",
+        "dateOfJoining": "2023-11-04",
+        "role": "Full Stack",
+        "status": "ACTIVE",
+        "department": 2,
+        "experience": 4,
+        "age": 29,
+        "email": "fiona@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "159",
+            "line1": "Birch Road",
+            "line2": "Apt 2C",
+            "pincode": "100007"
+        }
+    },
+    {
+        "id": 8,
+        "name": "George",
+        "employeeId": "g901",
+        "dateOfJoining": "2024-03-07",
+        "role": "Product Owner",
+        "status": "ACTIVE",
+        "department": 1,
+        "experience": 7,
+        "age": 42,
+        "email": "george@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "753",
+            "line1": "Poplar Lane",
+            "line2": "Unit 8",
+            "pincode": "100008"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Hannah",
+        "employeeId": "h234",
+        "dateOfJoining": "2023-07-05",
+        "role": "UX Designer",
+        "status": "ACTIVE",
+        "department": 3,
+        "experience": 3,
+        "age": 27,
+        "email": "hannah@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "852",
+            "line1": "Spruce Court",
+            "line2": "Floor 2",
+            "pincode": "100009"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Ian",
+        "employeeId": "i567",
+        "dateOfJoining": "2022-12-02",
+        "role": "Business Analyst",
+        "status": "INACTIVE",
+        "department": 1,
+        "experience": 5,
+        "age": 38,
+        "email": "ian@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "963",
+            "line1": "Willow Way",
+            "line2": "Building C",
+            "pincode": "100010"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Jasmine",
+        "employeeId": "j890",
+        "dateOfJoining": "2024-09-12",
+        "role": "Scrum Master",
+        "status": "PROBATION",
+        "department": 1,
+        "experience": 6,
+        "age": 31,
+        "email": "jasmine@example.com",
+        "password": "password123",
+        "address": {
+            "houseNo": "147",
+            "line1": "Ash Street",
+            "line2": "Suite 20",
+            "pincode": "100011"
+        }
+    }
+]

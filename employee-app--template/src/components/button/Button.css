@@ -1,0 +1,113 @@
+.button-class{
+    width: 100%;
+    padding: 10px;
+    background-color: #03AEEE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button-class:hover {
+    background-color: #0a7aa3;
+    transform: scale(1.01); 
+}
+
+.create-btn {
+    background-color: #03AEEE;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px; 
+    border: none;  
+    color: #fff;
+    cursor: pointer;
+}
+
+.create-btn:hover {
+    background-color: #0a7aa3;
+    transform: scale(1.01); 
+}
+.reset-btn {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;   
+    background-color: white;
+    border: 1px solid #d4d3d3;
+    cursor: pointer;
+}
+.reset-btn:hover {
+    background-color: #6465683b;
+    transform: scale(1.01); 
+}
+.cancel-btn {
+    position: absolute;
+    right: 5px;
+    width: 20px;
+    height: 44px;
+    border: none;
+    color: #b3b1b1;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+.create-emp-btn {
+    background-color: #EAF9FF;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    border-radius: 25px;
+    margin: 5px;
+    margin-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #EAF9FF;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.create-emp-btn .circle-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    margin-right: 4px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #03AEEE;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #EAF9FF;
+    flex-shrink: 0;
+}
+.return-home-btn {
+    background-color: #03AEEE;
+    width: 120px;
+    height: 30px;
+    border-radius: 5px; 
+    margin-top: 20px;
+    border: none;  
+    color: #fff;
+    cursor: pointer;
+}
+/* .logout-class {
+    position: absolute;
+    right: 20px;
+    margin-top: 20px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+} */
+/* .logout-btn { */
+    /* padding: 10px; */
+    /* background-color: #03AEEE; */
+    /* color: white; */
+    /* border: none; */
+    /* border-radius: 10%; */
+    /* font-size: 16px; */
+    /* cursor: pointer; */
+    /* transition: background-color 0.3s ease, transform 0.3s ease; */
+/* } */

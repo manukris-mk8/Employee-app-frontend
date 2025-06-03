@@ -1,0 +1,44 @@
+.right-outer-class {
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    background-color: #fff;
+    /* padding: 20px; */
+    border-radius: 10px;
+    width: 350px;
+}
+
+.login-form img {
+    position: relative;
+    display: flex;
+    margin-left: 2px;
+    width: 60%;
+    background-color: #FAFAFA;
+    margin-bottom: 35px;
+}   
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px; 
+    accent-color: #c0e3f0; 
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}

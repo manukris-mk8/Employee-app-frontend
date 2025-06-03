@@ -1,0 +1,61 @@
+.main-div {
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow-y: scroll;
+}
+/* .outer-div > div {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 1px 2px 3px #dfdcdc;
+
+} */
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 1px 2px 3px #dfdcdc;
+ }
+ .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+.list-table-header {
+    display: flex;
+    padding: 20px;
+    background-color: #EAF9FF;
+    margin: 10px;
+    /* gap: 10%; */
+    position: sticky;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 2px 3px #dfdcdc;
+}
+.list-table-header label {
+    width: 14.25%;
+}
+
+.status-selection {
+    border: none;
+    padding: 8px 35px;
+    font-size: 16px;
+    border-radius: 25px;
+    background-color: #EAF9FF;
+    margin-right: 20px;
+    appearance: none;          
+    -webkit-appearance: none;  
+    -moz-appearance: none;     
+    position: relative;
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,105 15,35 125,35" fill="%23000000"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 12px;
+}

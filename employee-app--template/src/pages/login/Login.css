@@ -1,0 +1,9 @@
+
+.outer-class{
+  display: flex;
+  height: 100vh;
+  /* font-family:  'Poppins' ; */
+    font-family: 'Nunito Sans';
+}
+
+

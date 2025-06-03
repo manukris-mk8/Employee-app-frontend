@@ -1,0 +1,35 @@
+.left-outer-class, .right-outer-class {
+    flex: 1;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-outer-class {
+  width:200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-outer-class {
+   background-color: #e2f9ff;
+    position: relative;
+}
+.circle {
+  width: 650px;
+    height: 650px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

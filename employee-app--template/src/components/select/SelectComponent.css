@@ -1,0 +1,29 @@
+.form-element {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 33%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+.form-element select {
+    width: 90%;
+    height: 35px;
+    background-color: #FAFAFA;
+    border: 1px solid #d4d3d3;
+    border-radius: 5px;
+    color: #a7a4a4;
+    padding-left: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.form-element label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #525151;
+}
