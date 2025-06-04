@@ -6,4 +6,83 @@
     font-family: 'Nunito Sans';
 }
 
+.right-outer-class {
+    background-color: #fff;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.login-form {
+    background-color: #fff;
+    /* padding: 20px; */
+    border-radius: 10px;
+    width: 350px;
+}
+
+.login-form img {
+    position: relative;
+    display: flex;
+    margin-left: 2px;
+    width: 60%;
+    background-color: #FAFAFA;
+    margin-bottom: 35px;
+}   
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px; 
+    accent-color: #c0e3f0; 
+    cursor: pointer;
+}
+
+.checkbox-container label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.left-outer-class, .right-outer-class {
+    flex: 1;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    border-top-left-radius: 3%;
+    border-bottom-left-radius: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-outer-class {
+  width:200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-outer-class {
+   background-color: #e2f9ff;
+    position: relative;
+}
+.circle {
+  width: 650px;
+    height: 650px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}

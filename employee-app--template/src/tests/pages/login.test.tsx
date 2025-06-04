@@ -78,7 +78,7 @@ describe("Login Page", () => {
 
 
 it("should handle successful login", async () => {
-    mockLoginMutation.mockResolvedValueOnce({ accessToken: {token: "fake-token", id: 'fakeId',name: 'fake', email:'fake@email.com',role:'fake-role' }});
+    mockLoginMutation.mockResolvedValueOnce({ data: {accessToken: {token: "fake-token", id: 'fakeId',name: 'fake', email:'fake@email.com',role:'fake-role' }}});
 
     renderLogin();
 

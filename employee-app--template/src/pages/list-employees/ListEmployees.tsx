@@ -6,16 +6,17 @@ import { type ChangeEvent } from 'react'
 import { SpecialButton } from '../../components/button/SpecialButton'
 // import store, { useAppSelector } from '../../store/store'
 import { useGetEmployeesQuery } from '../../api-services/employees/employee.api'
+import LoadingComponent from '../../components/loadingComponent/LoadingComponent'
 
 const ListEmployees = () => {
     const navigate = useNavigate();
 
     const [selectedStatusParam, setSelectedStatusParam] = useSearchParams();
-    const getEmployees = useGetEmployeesQuery();
+    const {data,isLoading} = useGetEmployeesQuery();
     // console.log("🚀 ~ ListEmployees ~ getEmployees:", getEmployees.data)
     
     // const data = employeeDummy;
-    const data = getEmployees.data
+    // const data = getEmployees.data
 
     // const data = store.getState().employee.employees
     // const data = useAppSelector((state) => state.employee.employees)
@@ -36,6 +37,8 @@ const ListEmployees = () => {
         e.target.value === 'ALL' ? newSearchParams.delete('status') : newSearchParams.set("status", e.target.value)
         setSelectedStatusParam(newSearchParams)
     }
+
+    if(isLoading) return <LoadingComponent/>
 
     return (
         <div className='main-div'>
