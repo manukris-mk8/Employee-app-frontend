@@ -5,6 +5,7 @@ import LoadingComponent from './components/loadingComponent/LoadingComponent';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import { ToastContainer } from 'react-toastify';
+import Profile from './pages/profile/Profile';
 
 const Login = React.lazy(() => import('./pages/login/Login'));
 const Layout = React.lazy(() => import('./components/layout/Layout'));
@@ -17,7 +18,7 @@ const EditEmployee = React.lazy(() => import('./pages/edit-employee/EditEmployee
 const isLoggedIn = () => {
   const token = localStorage.getItem("token");
   // console.log(login);
-  if(token){
+  if (token) {
     return true
   }
   return false;
@@ -88,6 +89,24 @@ const router = createBrowserRouter([
     ]
   },
   {
+    path: "profile/",
+    element: (
+      <React.Suspense fallback={<LoadingComponent />}>
+        <Layout />
+      </React.Suspense>
+    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <React.Suspense fallback={<LoadingComponent />}>
+            <Profile />
+          </React.Suspense>
+        )
+      }
+    ]
+  },
+  {
     path: '*',
     element: (
       <React.Suspense fallback={<LoadingComponent />}>
@@ -101,11 +120,11 @@ function App() {
   return (
     <div>
       <Provider store={store}>
-      <Suspense fallback={<LoadingComponent />}>
-        <RouterProvider router={router} />
-      </Suspense>
+        <Suspense fallback={<LoadingComponent />}>
+          <RouterProvider router={router} />
+        </Suspense>
       </Provider>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   );
 }

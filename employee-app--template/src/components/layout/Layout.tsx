@@ -2,6 +2,7 @@ import { Sidebar } from "../sidebar/Sidebar"
 import './Layout.css'
 import { Navigate, Outlet, useNavigate } from "react-router-dom"
 import { MdLogout } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
 
 
 const Layout = () => {
@@ -35,6 +36,7 @@ const Layout = () => {
             <Sidebar />
             <div className="rightside">
                 <div className="logout-class">
+                    <CgProfile size={40} onClick={()=>navigate('/profile')}/>
                     <h2>{`Hi, ${userDetails.name}`}</h2>
                     <MdLogout size={40} onClick={handleLogout} />
                 </div>

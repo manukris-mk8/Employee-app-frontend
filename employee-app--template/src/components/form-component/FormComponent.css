@@ -44,3 +44,26 @@
     font-weight: bold;
     color: #525151;
 }
+
+.profile-icon {
+    display: flex;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    justify-content: center;
+    margin-bottom: 50px;
+    background-image: url('../../assets/bg-image.png');
+    cursor: pointer;
+}
+
+.profile-icon img {
+    background-color: #03AEEE;
+    border-radius: 50%;
+}
+
+.profile-icon h1 {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    color: white;
+}

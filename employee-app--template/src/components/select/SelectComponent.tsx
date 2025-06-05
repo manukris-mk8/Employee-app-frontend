@@ -6,6 +6,7 @@ interface props{
     placeholder: string,
     className: string,
     value?:string | number
+    disabled? : boolean
     options : {
         value:string,
         label:string
@@ -18,7 +19,7 @@ export const SelectComponent = (props:props) => {
     return (
         <div className={props.className}>
                 <label htmlFor={props.id}>{props.label}</label>
-                <select name={props.id} id={props.id} value={props.value} onChange={props.onChange} required={true}>
+                <select name={props.id} id={props.id} value={props.value} onChange={props.onChange} required={true} disabled={props.disabled}>
                     <option value="" disabled  hidden>
                             {props.label}
                         </option>

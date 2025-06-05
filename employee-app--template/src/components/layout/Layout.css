@@ -30,7 +30,7 @@
 .logout-class {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 10px;
     position: absolute;
     right: 25px;
     margin-top: 20px;
@@ -41,4 +41,5 @@
 }
 .logout-class h2 {
     color: black;
+    margin-right: 20px;
 }
